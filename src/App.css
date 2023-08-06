@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container{
+  animation: in 5s;
+}
+
+.search {
+  text-align: center;
+  padding: 1rem;
+}
+input[type=text] {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255, 0.8);
+  background: rgba(255,255,255, 0.1);
+  color: #f8f8f8;
+}
+body{
+  background: rgb(2,0,36);
+background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#090979",GradientType=1);
+
+font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+}
+.top{
+  margin-left:20% ;
+  color: #f8f8f8;
+  
+}
+.location{
+  color: #f8f8f8;
+  margin-left: 32%;
+
+  font-size: 2.2rem;
+  animation: right-in 5s;
+  
+
+
+}
+.weather{
+  color: white;
+  margin-top: 2%;
+  margin-left: 40%;
+}
+
+.temp{
+  margin-left: 5%;
+  font-size: 3rem;
+}
+.middle{
+  display: flex;
+  
+}
+.description{
+  margin-left: 32%;
+}
+@keyframes in{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+.lipple{
+  display: flex;
+  margin-left: 11%;
+}
+.wind {
+
+  margin-left:45%;
+}
+.bottom{
+  display: flex;
+  justify-content: space-evenly;
+  color: #f8f8f8;
+}
+@media only screen  and (max-width:1100px){
+
+  .description{
+    margin-left: 25%;
+  }
+
+}
+@media only screen  and (max-width:900px){
+
+  .description{
+    margin-left: 25%;
+  }
+  input[type=text] {
+    padding: .7rem 1.5rem;
+    font-size: 0.8rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255, 0.8);
+    background: rgba(255,255,255, 0.1);
+    color: #f8f8f8;
+  }
+  .top{
+    margin-left:15% ;
+    color: #f8f8f8;
+    
+  }
+  .location{
+    color: #f8f8f8;
+    margin-left: 35%;
+  
+    font-size: 1.8rem;
+    animation: right-in 5s;
+    
+  
+  
+  }
+  .weather{
+    color: white;
+    margin-top: 2%;
+    margin-left: 35%;
+  }
+
+}
+@media only screen  and (max-width:800px){
+
+  .description{
+    margin-left: 15%;
+  }
+
+}
+@media only screen  and (max-width:680px){
+
+  .description{
+    margin-left: 15%;
+    
+  }
+  .location{
+    color: #f8f8f8;
+    margin-left: 35%;
+  
+    font-size: 1.2rem;
+    animation: right-in 5s;
+    
+  
+  
+  }
+  input[type=text] {
+    padding: .7rem 1.5rem;
+    font-size: 0.8rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255, 0.8);
+    background: rgba(255,255,255, 0.1);
+    color: #f8f8f8;
+  }
+  .temp{
+    margin-left: 5%;
+    font-size: 2rem;
+  }
+  .wind {
+
+    margin-left:35%;
+  }
+}
+@media only screen  and (max-width:560px){
+
+  .description{
+    margin-left: 15%;
+  }
+  .bottom{
+    display: flex;
+    justify-content: space-evenly;
+    color: #f8f8f8;
+    font-size: 0.6rem;
+  }
+  .weather{
+    font-size: 1.5rem;
+    margin-left: 30%;
+  }
+  .temp{
+    font-size: 1.2rem;
+
+  }
+  .middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+margin-right: 20%
+  }
+  .wind{
+    margin-left: 20%;
+  }
+
+}
