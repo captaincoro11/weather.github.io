@@ -14,8 +14,8 @@ let weather_icon;
 
 export default function App() {
   const [data, setData] = useState({})
-  const [datta,setDatta]=useState({})
-  const [daa,setDaa]=useState(false)
+ const [datta,setDatta]=useState({})
+  //const [daa,setDaa]=useState(false)
   const [location, setLocation] = useState('')
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=895284fb2d2c50a520ea537456963d9c`
@@ -131,7 +131,7 @@ let j=0;
            
             <div className="day1">
               <h1>Tomorrow</h1>
-              {datta.list ? <p >{datta.list[5].weather[0].main}</p> : null}
+              {datta.list ? <p >{datta.list[1].weather[0].main}</p> : null}
               {datta.list ? <p >{datta.list[5].main.temp}°C</p> : null}
             </div>
             <div className="day2">
