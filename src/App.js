@@ -1,13 +1,13 @@
-import React,{useState} from 'react'
 import axios from 'axios'
+import React, { useState } from 'react'
 import './App.css'
-import  clouds from './clouds.png'
-import  rain from './rain.png'
-import  clear from './clear.png'
-import  snow from './snow.png'
-import  mist from './mist.png'
-import  wind from './wind.png'
-import  humidity from './humidity.png'
+import clear from './assets/clear.png'
+import clouds from './assets/clouds.png'
+import humidity from './assets/humidity.png'
+import mist from './assets/mist.png'
+import rain from './assets/rain.png'
+import snow from './assets/snow.png'
+import wind from './assets/wind.png'
 let weather_icon;
 
 
@@ -23,7 +23,8 @@ export default function App() {
 
 
   const searchLocation = (event) => {
-   if(event.key==='Enter')
+    try {
+      if(event.key==='Enter')
    {
 
     axios.get(url).then((response)=>{
@@ -35,20 +36,27 @@ export default function App() {
       setDatta(response.data);
     })
     setLocation(' ');
+      
+    } }
+    catch (error) {
+      console.error('Error fetching data:', error);
+      
+      
+    }
+   
   
     
 
    }
-  }
+  
  
   
 
- 
-let j=0;
+
   let humid =humidity;
   let windi=wind;
-  let i;
-  let weather_ico=[1,2,3,4,5];
+
+
 
   if(data.weather)
   {
@@ -72,6 +80,14 @@ let j=0;
  {
  weather_icon=mist;
  }
+ else if(data.weather[0].main === 'Fog')
+ {
+ weather_icon=mist;
+ }
+ else if(data.weather[0].main === 'Smoke')
+ {
+ weather_icon=mist;
+ }
   }
  
   
@@ -84,7 +100,7 @@ let j=0;
 
 
   return (
-  <>
+  <div className='main_container'>
 
   <div className='container'>
     <div className="search">
@@ -157,7 +173,7 @@ let j=0;
           </div>
       </div>
   
-  </>
+  </div>
   )
 }
 
