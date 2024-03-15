@@ -8,6 +8,7 @@ import mist from './assets/mist.png'
 import rain from './assets/rain.png'
 import snow from './assets/snow.png'
 import wind from './assets/wind.png'
+import Swal from 'sweetalert2'
 let weather_icon;
 
 
@@ -31,15 +32,35 @@ export default function App() {
 
       setData(response.data);
 
+    }).catch(error=>{
+      Swal.fire({
+        title:error.response.data.message,
+        icon:"error",
+        timer:2000
+      })
     })
     axios.get(prl).then((response)=>{
       setDatta(response.data);
+
+    }).catch(error=>{
+      Swal.fire({
+        title:error.response.data.message,
+        icon:"error",
+        timer:2000
+      })
     })
     setLocation(' ');
       
     } }
     catch (error) {
       console.error('Error fetching data:', error);
+
+        Swal.fire({
+          title:error.response.data.message,
+          icon:"error",
+          timer:2000
+        })
+
       
       
     }
